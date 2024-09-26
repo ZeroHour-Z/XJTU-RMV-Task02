@@ -61,7 +61,7 @@ void processImage(const string& imagePath) {
     // 二值化
     Mat binaryImage;
     threshold(grayImage, binaryImage, 125, 255, THRESH_BINARY);
-    imwrite("binary_image.jpg", binaryImage);
+    imwrite("../resources/binary_image.jpg", binaryImage);
     // 膨胀
     Mat dilatedImage;
     dilate(binaryImage, dilatedImage, Mat(), Point(-1, -1), 2);
